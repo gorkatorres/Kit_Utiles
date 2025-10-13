@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "kit_utiles"
+version = "0.1.0"
+description = "Proyecto de automatización y tests"
+authors = ["Tu Nombre <gorkatorres>"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--tb=short -q --cov=src --cov-report=term-missing --cov-fail-under=85"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
