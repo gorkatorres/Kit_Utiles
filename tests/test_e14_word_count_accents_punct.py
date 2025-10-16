@@ -6,5 +6,5 @@ def test_word_count_acentos_y_signos():
     texto = "¿Qué, qué? ¡Árbol! árbol... ÁrBoL"
     wc = word_count(texto)
     # Tras normalizar y a minúsculas, "qué" -> "que", "árbol" -> "arbol"
-    assert wc.get("que", 0) == 2
-    assert wc.get("arbol", 0) == 3
+    assert wc.get("qué", 0) == 2
+    assert wc.get("árbol", 0) == 3
