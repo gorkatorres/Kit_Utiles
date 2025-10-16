@@ -1,6 +1,6 @@
 
 from src.numbers import unique_sorted
-#comentario3
+
 def test_unique_sorted_numeros():
     """Comprueba que [3, 1, 2, 3, 2] devuelve [1, 2, 3]"""
     datos = [3, 1, 2, 3, 2]
