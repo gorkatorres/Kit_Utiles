@@ -14,6 +14,6 @@ def test_roundtrip_nested(tmp_path: Path):
     assert load_lines(p) == ["x","y"]
 
 def save_lines(path: Path, lines):
-    content = "\n".join(lines)
     path.parent.mkdir(parents=True, exist_ok=True)
+    content = "\n".join(lines)
     path.write_text(content, encoding="utf-8")

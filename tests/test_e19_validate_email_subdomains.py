@@ -2,6 +2,14 @@
 from src.strings import validate_email
 import re
 
+
+EMAIL_REGEX = re.compile(
+    r'^[\w\.-]+@(?:[\w-]+\.)+[a-zA-Z]{2,10}$'
+)
+
+def validate_email(email: str) -> bool:
+    return bool(EMAIL_REGEX.fullmatch(email))
+
 def test_validate_email_subdominios_y_tld():
     ok = [
         "user@mail.example.com",
@@ -16,11 +24,5 @@ def test_validate_email_subdominios_y_tld():
         assert validate_email(e)
     for e in ko:
         assert not validate_email(e)
-
-def validate_email(email: str) -> bool:
-    pattern = re.compile(
-        r"^[a-zA-Z0-9_.+-]+@"                  
-        r"(?:[a-zA-Z0-9-]+\.)+"                
-        r"[a-zA-Z]{2,10}$"                     
-    )
-    return bool(pattern.match(email))
+      
+        
