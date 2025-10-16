@@ -16,13 +16,22 @@ def test_validate_email_subdominios_y_tld():
         "a_b.c-d@sub.domain.edu",
     ]
     ko = [
+<<<<<<< HEAD
         "user@mail.example.c"      # TLD 1
         "user@mail.example.toolongtld" # TLD >10
+=======
+        "user@mail.example.c"       # TLD 1
+        "user@mail.example.toolongtld"  # TLD >10
+>>>>>>> 54b41f2238db93ec2ca2f84886d9765dc2750b02
         "user@@mail.com"
     ]
     for e in ok:
         assert validate_email(e)
     for e in ko:
         assert not validate_email(e)
+<<<<<<< HEAD
       
         
+=======
+
+>>>>>>> 54b41f2238db93ec2ca2f84886d9765dc2750b02
