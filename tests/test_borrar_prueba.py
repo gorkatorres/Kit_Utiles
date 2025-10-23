@@ -1,1 +1,2 @@
-# tengo que implementar la función borrar_prueba
+# tengo que implementar la funcion borrar_pru 
+#Hola juan
